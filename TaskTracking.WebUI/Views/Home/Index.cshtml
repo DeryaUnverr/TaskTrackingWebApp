@@ -1,0 +1,88 @@
+﻿@model AppUserSignInDto
+@{ ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_StandartLayout.cshtml"; }
+<link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+
+<form asp-action="GirisYap" method="post">
+    <div class="container px-4 py-5 mx-auto form-group">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="~/img/logo.jpg" width style="width: 90px;height: 90px;"> </div>
+                            <h3 class="mb-5 text-center heading">Personel İş Takip</h3>
+                            <h6 class="msg-info">Lütfen kullanıcı bilgilerinizi giriniz</h6>
+                            <div class="form-group">
+                                <label asp-for="UserName" class="form-control-label text-muted">Kullanıcı Adı</label>
+                                <input asp-for="UserName" placeholder="" class="form-control">
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="form-control-label text-muted">Şifre</label>
+                                <input asp-for="Password" type="password" class="form-control">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="row justify-content-center my-3 px-3"> <button asp-action="GirisYap" class="btn-block btn-color">Giriş Yap</button> </div>
+                            <div class="form-check">
+                                <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+                                <label asp-for="RememberMe" class="form-check-label">Beni Hatırla</label>
+                            </div>
+                            <div class="bottom text-center mt-2">
+                                Hesabınız var mı?
+                                <button asp-action="KayitOl"  class="btn btn-white ml-2">KayitOl</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card card2">
+                    <div class="my-auto mx-md-5 px-md-5 right">
+                        <h3 class="text-white">Personel Takip Projesi ile çalışmalarınızın takibi daha kolay.</h3> <small class="text-white">
+                            Personel takip sistemi ile sisteme yeni personel atama, atanan personellerini görevlendirme
+                            yapılan işlemleri raporlama ve personellerin çalışmalarını istatiksel olarak gösterimini sağlıyoruz.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+
+    </div>
+</form>
+
+
+@*<form asp-action="GirisYap" method="post" class="mt-5 w-50 mx-auto p-4 shadow">
+        <div class="form-group">
+            <img src="~/img/YSKLogo.jpg " style="height: 10rem !important;" class="w-45 h-50 img-thumbnail center" />
+        </div>
+        <div class="form-group text-center  aleert alert-danger">
+            <i class="fas fa-app-store mr-2"></i> İş Takip Paneli
+        </div>
+        <div class="form-group">
+            <label asp-for="UserName">Kullanıcı Adı :</label>
+            <span asp-validation-for="UserName" class="text-danger"></span>
+            <input asp-for="UserName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Şifre :</label>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+        <div class="form-check">
+            <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+            <label asp-for="RememberMe" class="form-check-label">Beni Hatırla</label>
+        </div>
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+
+        <a asp-action="KayitOl" class="btn btn-warning btn-sm">Kayıt Ol</a>
+        <input type="submit" class="btn btn-info btn-sm" value="Giriş Yap" />
+
+    </form>*@

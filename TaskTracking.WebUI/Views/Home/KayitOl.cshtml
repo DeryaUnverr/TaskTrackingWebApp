@@ -1,0 +1,70 @@
+﻿@model AppUserAddDto
+@{ ViewData["Title"] = "KayitOl";
+    Layout = "~/Views/Shared/_StandartLayout.cshtml"; }
+<link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+    <div class="container px-4 py-5 mx-auto form-group">
+        <div class="row justify-content-center my-auto">
+            <div class="col-md-8 col-10 my-5">
+                <div class="row justify-content-center px-3 mb-3"> <img class="rounded 50%" id="logo" src="~/img/logo.jpg" width style="width: 90px;height: 90px; "> </div>
+                <h3 class="mb-5 text-center heading">Personel İş Takip</h3>
+                <form asp-action="KayitOl" method="post" class="mt-4 w-75 mx-auto p-3 shadow">
+                    <h4 class="text-center">Kayıt Ol</h4>
+                    <div class="form-group">
+                        <label asp-for="@Model.Name">Adınız :</label>
+                        <span asp-validation-for="@Model.Name" class="text-white"></span>
+                        <input asp-for="@Model.Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Surname">Soyadınız :</label>
+                        <span asp-validation-for="@Model.Surname" class="text-white"></span>
+                        <input asp-for="@Model.Surname" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Email">Email :</label>
+                        <span asp-validation-for="@Model.Email" class="text-white"></span>
+                        <input asp-for="@Model.Email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Password">Parola :</label>
+                        <span asp-validation-for="@Model.Password" class="text-white"></span>
+                        <input type="password" asp-for="@Model.Password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.ConfirmPassword">Parola Tekrar:</label>
+                        <span asp-validation-for="@Model.ConfirmPassword" class="text-white"></span>
+                        <input type="password" asp-for="@Model.ConfirmPassword" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="@Model.UserName">Kullanıcı Adı:</label>
+                        <span asp-validation-for="@Model.UserName" class="text-white"></span>
+                        <input asp-for="@Model.UserName" class="form-control" />
+                    </div>
+
+                    <div asp-validation-summary="ModelOnly" class="text-white">
+
+                    </div>
+
+                    <a asp-action="Index" class="btn btn-warning btn-sm">Vazgeç</a>
+                    <button type="submit" class=" btn btn-info btn-sm">Kayıt Ol</button>
+
+
+                </form>
+
+                @*<div class="bottom text-center mt-2">
+                    <p href="#" class="sm-text mx-auto">
+                        Hesabınız var mı?
+                        <button asp-action="KayitOl" class="btn btn-white ml-2">KayitOl</button>
+                    </p>
+                </div>*@
+            </div>
+        </div>
+        <div asp-validation-summary="ModelOnly" class="text-white">
+
+        </div>
+    </div>
+
+
+
+
