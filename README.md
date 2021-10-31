@@ -1,2 +1,2 @@
 # TaskTrackingWebApp
-<img src="https://cdn.discordapp.com/attachments/645635074452357122/904452220962103386/taskTrackingDerya.gif"> </img>
+<img src="https://github.com/DeryaUnverr/TaskTrackingWebApp/blob/master/taskTrackingDerya.gif"> </img>
